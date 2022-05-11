@@ -88,6 +88,17 @@
 
 }
 
+.menu-horizontal .btn{
+    position: relative;
+    display: block;
+    color: #fff;
+    background-color: rgb(255, 191, 16);
+    border: none;
+    border-radius: 3px;
+
+}
+
+
 
 .menu-vertical {
     position: absolute;
