@@ -27,27 +27,15 @@
                 $('#miModal').modal()});
 
 
-                $("#btnEnviar").on("click",function(){
+        });
+
+        $("#botonG").on("click",function(){
             setTimeout(function(){
+                alert('esto se va a cerrar');
                 location.reload();
             },1000);
 
         });
-
-        
-            $("#btnEliminar").on("click",function(){
-                $('.Nombre , .telefono , .correo , .mensaje').val('');
-            });
-            
-
-            
-     
-
-
-        });
-
-        
-        
 
 
 
@@ -155,15 +143,14 @@
 
             <h2>Contacto</h2>
             <div id="Datos">
-                <input type="text" class="nombre" name="Nombre" placeholder="Nombre" >
-                <input type="text" class="telefono"name="Telefono" placeholder="Telefono" >
-                <input type="text" class="correo"name="Correo" placeholder="Correo" >
-                <textarea class="mensaje"name="Mensaje" placeholder="Escriba aqui su mensaje"  ></textarea>
-                
+                <input type="text" name="Nombre" placeholder="Nombre" required>
+                <input type="text" name="Telefono" placeholder="Telefono" required>
+                <input type="text" name="Correo" placeholder="Correo" required>
+                <textarea name="Mensaje" placeholder="Escriba aqui su mensaje" required></textarea>
             </div>
-
-            <input type="button" id="btnEnviar" class="btnEnviar"  value="ENVIAR">
-            <input type="button" id="btnEliminar" value="ELIMINAR">
+           
+                <input type="button" value="ENVIAR" id="botonG">
+                <input type="button" value="ELIMINAR" id="botonE">
 
             </div>
         </div>
