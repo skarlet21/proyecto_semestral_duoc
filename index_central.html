@@ -22,32 +22,33 @@
 
     <!--script del formulario modal-->
     <script>
-        $(document).ready(function(){
-            $('#btnLlamar').on("click",function(){
-                $('#miModal').modal()});
+        $(document).ready(function () {
+            $('#btnLlamar').on("click", function () {
+                $('#miModal').modal()
+            });
 
 
-                $("#btnEnviar").on("click",function(){
-            setTimeout(function(){
-                location.reload();
-            },1000);
+            $("#btnEnviar").on("click", function () {
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
 
-        });
+            });
 
-        
-            $("#btnEliminar").on("click",function(){
+
+            $("#btnEliminar").on("click", function () {
                 $('.Nombre , .telefono , .correo , .mensaje').val('');
             });
-            
 
-            
-     
+
+
+
 
 
         });
 
-        
-        
+
+
 
 
 
@@ -79,10 +80,10 @@
             <!--cierre de busqueda-->
 
             <!--login-->
-            <div class=" user">
+            <div class="nav justify-content-lg-end">
                 <div class=" user">
                     <div class="btn-group ">
-                        <ul class="nav justify-content-end ">
+                        <ul class="nav justify-content-lg-end ">
                             <li class="nav-item ">
                                 <a class="nav-link dropdown " data-toggle="dropdown" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false">
@@ -90,13 +91,14 @@
                                 </a>
                                 <ul class="dropdown-menu menu-vertical">
                                     <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal"
-                                        data-target="#exampleModal">
+                                        data-target="#login">
                                         iniciar session
                                     </button>
+
                                     <br>
                                     <p style="text-align: center;"> ¿eres nuevo?</p>
                                     <button type="button" class="btn btn-primary dropdown-item " data-toggle="modal"
-                                        data-target="#exampleModal">
+                                        data-target="#register">
                                         crear nuevo usuario
                                     </button>
                             </li>
@@ -138,7 +140,7 @@
                         <li><a href="#" style="text-align: center;">...</a></li>
                     </ul>
                 </li>
-                
+
                 <ul class="menu-horizontal">
                     <input type="button" id="btnLlamar" value="Contacto" class=" btn  menu-horizontal">
                 </ul>
@@ -146,28 +148,29 @@
         </nav>
     </div>
     <!--cierre de segunda barra-->
+
     <!--inicio formulario-->
     <div id="miModal" class="modal fade show" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content" id="content">
                 <div class="modal-header">
-        <div style="width:500px ;" class="form-group">
+                    <div style="width:500px ;" class="form-group">
 
-            <h2>Contacto</h2>
-            <div id="Datos">
-                <input type="text" class="nombre" name="Nombre" placeholder="Nombre" >
-                <input type="text" class="telefono"name="Telefono" placeholder="Telefono" >
-                <input type="text" class="correo"name="Correo" placeholder="Correo" >
-                <textarea class="mensaje"name="Mensaje" placeholder="Escriba aqui su mensaje"  ></textarea>
-                
+                        <h2>Contacto</h2>
+                        <div id="Datos">
+                            <input type="text" class="nombre" name="Nombre" placeholder="Nombre">
+                            <input type="text" class="telefono" name="Telefono" placeholder="Telefono">
+                            <input type="text" class="correo" name="Correo" placeholder="Correo">
+                            <textarea class="mensaje" name="Mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+
+                        </div>
+
+                        <input type="button" id="btnEnviar" class="btnEnviar" value="ENVIAR">
+                        <input type="button" id="btnEliminar" value="ELIMINAR">
+
+                    </div>
+                </div>
             </div>
-
-            <input type="button" id="btnEnviar" class="btnEnviar"  value="ENVIAR">
-            <input type="button" id="btnEliminar" value="ELIMINAR">
-
-            </div>
-        </div>
-        </div>
         </div>
     </div>
     <!--cierre formulario-->
@@ -285,52 +288,165 @@
     <!--datos de nosotros-->
 
     <!--modal login-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="register">
+                        <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label for="validationCustom01">Nombre</label>
+                                    <input type="text" class="form-control" id="validationCustom01"
+                                        placeholder="First name" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                                <div class="form-group col">
+                                    <label for="validationCustom02">Apellido</label>
+                                    <input type="text" class="form-control" id="validationCustom02"
+                                        placeholder="Last name" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <label for="validationCustom02">correo electronico</label>
+                                    <input type="email" class="form-control" id="validationCustom02"
+                                        placeholder="peluditos@****.com" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <label for="validationCustom02">Contraseña</label>
+                                    <input type="password" class="form-control" id="validationCustom02"
+                                        placeholder="****" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                    <button class="btn btn-primary" type="reset"> Borrar</button>
+                    </form>
+
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+                    <h5 class="modal-title" id="login">Iniciar sesion</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="login">
-                        <form action="">
-                            <label for="email"> Correo electronico</label>
-                            <input type="email" name="email" id="" class="form-control" placeholder="peluditos@****.com">
-                        </form>
-                        <form action="">
-                            <label for="pasword"> contraseña</label>
-                            <input type="password" name="" id="" placeholder="contraseña">
-                        </form>
-                    </div>
-                    <button  type="button" class="btn btn-"> iniciar</button>
+                    <form class="needs-validation" novalidate>
+                        <div class="">
+                            <div class="">
+                                <label for="validationCustom02">correo electronico</label>
+                                <input type="email" class="form-control" id="validationCustom02"
+                                    placeholder="peluditos@****.com" value="" required>
+                                <div class="valid-feedback">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <label for="validationCustom02">Contraseña</label>
+                                <input type="password" class="form-control" id="validationCustom02" placeholder="****"
+                                    value="" required>
+                                <div class="valid-feedback">
+
+                                </div>
+                            </div>
+                        </div>
                 </div>
+                <br>
+                <button class="btn btn-primary" type="submit">Iniciar</button>
+                </form>
+
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+
 
             </div>
+
         </div>
     </div>
 
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Modal -->
-
+    </div>
+    </div>
+    </div>
 
 
 </body>
-
-</html>
