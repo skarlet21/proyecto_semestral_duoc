@@ -22,33 +22,32 @@
 
     <!--script del formulario modal-->
     <script>
-        $(document).ready(function () {
-            $('#btnLlamar').on("click", function () {
-                $('#miModal').modal()
-            });
+        $(document).ready(function(){
+            $('#btnLlamar').on("click",function(){
+                $('#miModal').modal()});
 
 
-            $("#btnEnviar").on("click", function () {
-                setTimeout(function () {
-                    location.reload();
-                }, 1000);
+                $("#btnEnviar").on("click",function(){
+            setTimeout(function(){
+                location.reload();
+            },1000);
 
-            });
+        });
 
-
-            $("#btnEliminar").on("click", function () {
+        
+            $("#btnEliminar").on("click",function(){
                 $('.Nombre , .telefono , .correo , .mensaje').val('');
             });
+            
 
-
-
-
+            
+     
 
 
         });
 
-
-
+        
+        
 
 
 
@@ -80,10 +79,10 @@
             <!--cierre de busqueda-->
 
             <!--login-->
-            <div class="nav justify-content-lg-end">
+            <div class=" user">
                 <div class=" user">
                     <div class="btn-group ">
-                        <ul class="nav justify-content-lg-end ">
+                        <ul class="nav justify-content-end ">
                             <li class="nav-item ">
                                 <a class="nav-link dropdown " data-toggle="dropdown" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false">
@@ -94,7 +93,6 @@
                                         data-target="#login">
                                         iniciar session
                                     </button>
-
                                     <br>
                                     <p style="text-align: center;"> ¿eres nuevo?</p>
                                     <button type="button" class="btn btn-primary dropdown-item " data-toggle="modal"
@@ -140,7 +138,7 @@
                         <li><a href="#" style="text-align: center;">...</a></li>
                     </ul>
                 </li>
-
+                
                 <ul class="menu-horizontal">
                     <input type="button" id="btnLlamar" value="Contacto" class=" btn  menu-horizontal">
                 </ul>
@@ -148,29 +146,28 @@
         </nav>
     </div>
     <!--cierre de segunda barra-->
-
     <!--inicio formulario-->
     <div id="miModal" class="modal fade show" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content" id="content">
                 <div class="modal-header">
-                    <div style="width:500px ;" class="form-group">
+        <div style="width:500px ;" class="form-group">
 
-                        <h2>Contacto</h2>
-                        <div id="Datos">
-                            <input type="text" class="nombre" name="Nombre" placeholder="Nombre">
-                            <input type="text" class="telefono" name="Telefono" placeholder="Telefono">
-                            <input type="text" class="correo" name="Correo" placeholder="Correo">
-                            <textarea class="mensaje" name="Mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-
-                        </div>
-
-                        <input type="button" id="btnEnviar" class="btnEnviar" value="ENVIAR">
-                        <input type="button" id="btnEliminar" value="ELIMINAR">
-
-                    </div>
-                </div>
+            <h2>Contacto</h2>
+            <div id="Datos">
+                <input type="text" class="nombre" name="Nombre" placeholder="Nombre" >
+                <input type="text" class="telefono"name="Telefono" placeholder="Telefono" >
+                <input type="text" class="correo"name="Correo" placeholder="Correo" >
+                <textarea class="mensaje"name="Mensaje" placeholder="Escriba aqui su mensaje"  ></textarea>
+                
             </div>
+
+            <input type="button" id="btnEnviar" class="btnEnviar"  value="ENVIAR">
+            <input type="button" id="btnEliminar" value="ELIMINAR">
+
+            </div>
+        </div>
+        </div>
         </div>
     </div>
     <!--cierre formulario-->
@@ -447,6 +444,4 @@
     </div>
     </div>
     </div>
-
-
 </body>
