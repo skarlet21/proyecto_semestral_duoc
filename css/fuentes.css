@@ -47,6 +47,7 @@
 
 
 .barra-two {
+    position: relative;
     max-width: 900px;
     margin: auto;
     background-color: rgb(255, 191, 16);

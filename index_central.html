@@ -53,6 +53,8 @@
 
     </script>
 
+    <script src="js/login.js"></script>
+
 
 </head>
 
@@ -68,7 +70,7 @@
             <!--cierre de logo-->
 
             <!--barra de busqueda-->
-            <div class="collapse navbar-collapse nav justify-content-center" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse nav justify-content-lg-center" id="navbarTogglerDemo02">
                 <form class="d-flex me-2 my-lg-0">
                     <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
@@ -79,31 +81,31 @@
             <!--cierre de busqueda-->
 
             <!--login-->
-            <div class=" user">
-                <div class=" user">
-                    <div class="btn-group ">
-                        <ul class="nav justify-content-end ">
-                            <li class="nav-item ">
-                                <a class="nav-link dropdown " data-toggle="dropdown" href="#" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <img src="" alt="login" href="#" height="20px" width="40px">
+            <div class="nav justify-content-lg-end">
+                <div class="btn-group ">
+                    <ul class="nav justify-content-end ">
+                        <li class="nav-item ">
+                            <a class="nav-link dropdown " data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="img/pp.png" alt="login" href="#" height="20px" width="40px">
+                            </a>
+                            <ul class="dropdown-menu menu-vertical">
+                                <a type="button" class="btn btn-primary dropdown-item" 
+                                    href="#login">
+                                    iniciar session
                                 </a>
-                                <ul class="dropdown-menu menu-vertical">
-                                    <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal"
-                                        data-target="#exampleModal">
-                                        iniciar session
-                                    </button>
-                                    <br>
-                                    <p style="text-align: center;"> ¿eres nuevo?</p>
-                                    <button type="button" class="btn btn-primary dropdown-item " data-toggle="modal"
-                                        data-target="#exampleModal">
-                                        crear nuevo usuario
-                                    </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="" alt="carrito de compra">
+                                <br>
+                                <p style="text-align: center;"> ¿eres nuevo?</p>
+                                <button type="button" class="btn btn-primary dropdown-item " data-toggle="modal"
+                                    data-target="#registrer">
+                                    crear nuevo usuario
+                                </button>
+                        </li>
+                    </ul>
                 </div>
+                <img src="" alt="carrito de compra">
+            </div>
+
         </nav>
     </div>
     <!--cierre de barra login-->
@@ -283,54 +285,69 @@
     <!--cierre de marcas-->
 
     <!--datos de nosotros-->
+    <!--modal-->
 
     <!--modal login-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <section id="login" class="modal">
+        <div class="modal_content">
+            <div class=" login">
+                <nav class="">
+                    <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+
+
+                    <div class="bs-login">
+
+                        <div class="form-group">
+                            <label for="email"
+                                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                correo
+                                electronico: </label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="peluditos@****.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"
+                                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                Contraseña </label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="*****">
+                        </div>
+
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-primary">ingresar</button>
+                </nav>
+
+            </div>
+
+
+    </section>
+
+    <!--modal register-->
+    <div class="modal fade" id="registrer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">registro</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="login">
-                        <form action="">
-                            <label for="email"> Correo electronico</label>
-                            <input type="email" name="email" id="" class="form-control" placeholder="peluditos@****.com">
-                        </form>
-                        <form action="">
-                            <label for="pasword"> contraseña</label>
-                            <input type="password" name="" id="" placeholder="contraseña">
-                        </form>
-                    </div>
-                    <button  type="button" class="btn btn-"> iniciar</button>
+                    ...
                 </div>
-
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
 
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Modal -->
-
 
 
 </body>
+
 
 </html>
