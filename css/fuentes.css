@@ -1,16 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans';
+*{
+    font-style: normal;
+    margin: auto;
 
+
+}
+body{
+    background-color: #eaebed;
 }
 
 .barra-one {
-    max-width: 900px;
     margin: auto;
-    background-color: rgb(24, 88, 104);
-    font-size: 20px;
+    background-color: #5b8291;
+
     border: none;
 }
 
@@ -47,11 +48,11 @@
 
 
 .barra-two {
-    max-width: 900px;
     margin: auto;
-    background-color: rgb(24, 88, 104);
+    background-color: #5b8291;
     font-size: 20px;
     border: none;
+    ;
 
 }
 
@@ -63,17 +64,13 @@
 
 }
 
-.carro {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    float: right;
-}
+
 
 .menu-horizontal {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .boton_desplegable>li:hover {
@@ -84,7 +81,7 @@
 .menu-horizontal>li>a {
     display: block;
     padding: 1px 2px;
-    color: white;
+     color: white;
     text-decoration: none;
 
 }
@@ -348,6 +345,30 @@ img {
     }
 
     100% {
+
         margin-left: -300%;
     }
+    
+}
+
+.lol{
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    border:2px solid #fff;
+
+}
+.put{
+    cursor: pointer;
+}
+.carro {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    right: 20px;
 }
